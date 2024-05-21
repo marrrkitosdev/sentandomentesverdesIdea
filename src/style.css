@@ -1,0 +1,106 @@
+#header,
+#footer {
+    background-color: #248A00;
+}
+
+.verdePrincipal {
+    color: #248A00;
+}
+
+.textFont {
+    font-family: "Just Me Again Down Here", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: #248A00;
+    position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+#links {
+    display: none;
+    flex-direction: column;
+}
+
+/* Style navigation menu links */
+.topnav a {
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+#kiko-slider {
+    background-color: white;
+    width: 100%;
+    box-sizing: content-box;
+    position: relative;
+}
+
+#kiko-slider>ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#kiko-slider>ul.slider {
+    position: sticky;
+    padding-bottom: 15rem;
+    display: flex;
+    justify-content: center;
+}
+
+#kiko-slider>ul.slider li {
+    border-radius: 1rem;
+    position: absolute;
+    opacity: 0;
+    transition: opacity .5s;
+    background: #fff;
+    height: 20rem;
+}
+
+#kiko-slider>ul.slider li img {
+    width: 100%;
+    max-width: 90vw;
+    height: 80%;
+    object-fit: cover;
+    border: 3px solid #248A00;
+}
+
+#kiko-slider > ul.slider li:first-child {
+    opacity: 1;
+    /* Mostramos el primer <li> */
+}
+
+#kiko-slider > ul.slider li:target {
+    opacity: 1;
+    /* Mostramos el <li> del enlace que pulsemos */
+}
+
+#kiko-slider>.menu {
+    text-align: center;
+    position: sticky;
+    margin: 2rem;
+}
+
+#kiko-slider>.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+#kiko-slider>.menu li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: #248A00;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 100%;
+}

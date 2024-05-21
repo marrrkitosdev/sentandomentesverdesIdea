@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/src/img/Cerebro sentado.png" type="image/x-icon">
+    <title>Sentando Mentes VeRdes</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header id="header" class="p-1">
+        <div class="topnav flex content-center justify-between">
+            <a href="#home" class="flex content-center">Inicio</a>
+            <a href="javascript:void(0);" class="icon flex content-center" onclick="clickMenu()">
+                <img src="/src/img/menu.png" alt="Menu" class="size-10">
+            </a>
+        </div>
+        <div id="links" class="text-white flex flex-col gap-4 pl-3 pb-1">
+            <a href="#presentacion">¿Quiénes somos?</a>
+            <a href="#galeriaTitle">Galería</a>
+            <a href="#accesoRedes">Redes</a>
+        </div>
+    </header>
+    <main id="main">
+        <section id="primeraVista" class="pb-2">
+            <div id="titleText">
+                <h1 class="textFont verdePrincipal text-5xl text-center tracking-widest">Sentando mentes veRdes</h1>
+            </div>
+            <div id="imgDiv" class="flex justify-center">
+                <img src="/src/img/Cerebro sentado.png" alt="Logo" title="Logo" class="size-10/12">
+            </div>
+        </section>
+        <section id="presentacion">
+            <div id="presentacionTitle">
+                <h1 class="textFont verdePrincipal text-5xl text-center tracking-widest">¿Quiénes somos?</h1>
+            </div>
+            <div id="presentacionParrafo" class="p-1 text-center text-2xl">
+                <p class="textFont">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa corporis deserunt
+                    ullam, enim quaerat tempore eos accusantium quidem nam non quisquam veniam quia quod in ab velit
+                    maxime dignissimos ut assumenda dicta? Iste repellat placeat officiis iusto quas fuga laudantium!
+                    Similique quidem eius tempore autem aspernatur iste explicabo natus est?</p>
+            </div>
+        </section>
+        <section id="galeria">
+            <div id="galeriaTitle" class="pb-5 pt-5">
+                <h1 class="textFont verdePrincipal text-5xl text-center tracking-widest">Galería</h1>
+            </div>
+            <div id="kiko-slider">
+                <ul class="slider rounded-xl">
+                    <li id="slide1" class="liPrim">
+                        <img src="https://loremflickr.com/320/240/chile,santiago" class="rounded-xl" />
+                    </li>
+                    <li id="slide2">
+                        <img src="https://loremflickr.com/320/240" class="rounded-xl" />
+                    </li>
+                    <li id="slide3">
+                        <img src="/src/img/qqq.jpg" class="rounded-xl">
+                    </li>
+                    <li id="slide4">
+                        <img src="https://loremflickr.com/320/240/spain" class="rounded-xl">
+                    </li>
+                    <li id="slide5">
+                        <img src="/src/img/q.jpg" class="rounded-xl">
+                    </li>
+                    <li id="slide6">
+                        <img src="https://loremflickr.com/320/240/fire" class="rounded-xl">
+                    </li>
+                </ul>
+
+                <ul class="menu">
+                    <li onclick="llamarPrimerImg()">
+                        <a href="#slide1" id="slide1">1</a>
+                    </li>
+                    <li onclick="ocultarPrimerImg()">
+                        <a href="#slide2">2</a>
+                    </li>
+                    <li onclick="ocultarPrimerImg()">
+                        <a href="#slide3">3</a>
+                    </li>
+                    <li onclick="ocultarPrimerImg()">
+                        <a href="#slide4">4</a>
+                    </li>
+                    <li onclick="ocultarPrimerImg()">
+                        <a href="#slide5">5</a>
+                    </li>
+                    <li onclick="ocultarPrimerImg()">
+                        <a href="#slide6">6</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="p-3">
+        <div id="accesoRedes">
+            <ul class="flex justify-around">
+                <li class="flex bg-black rounded-xl"><img src="/src/img/instagram.svg" alt="" class="size-8 invert"></li>
+                <li class="flex bg-white rounded-2xl"><img src="/src/img/facebook.svg" alt="" class="size-8"></li>
+                <li class="flex bg-black rounded-2xl"><img src="/src/img/whatsapp.svg" alt="" class="size-8 invert"></li>
+            </ul>
+        </div>
+        <div class="textoDerechos">
+            <p class="text-center textFont text-2xl m-2 underline">Sentando mentes veRdes 2024</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let liPrim = document.querySelector(".liPrim");
+            liPrim.style.opacity = 1;
+        });
+
+        function clickMenu() {
+            let x = document.querySelector("#links");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
+
+        function ocultarPrimerImg() {
+            let liPrim = document.querySelector(".liPrim");
+            liPrim.style.opacity = 0;
+        }
+
+        function llamarPrimerImg() {
+            let liPrim = document.querySelector(".liPrim");
+            liPrim.style.opacity = 1;
+        }
+    </script>
+</body>
+</html>
