@@ -13,21 +13,7 @@
     font-style: normal;
 }
 
-/* Style the navigation menu */
-.topnav {
-    overflow: hidden;
-    background-color: #248A00;
-    position: relative;
-}
-
-/* Hide the links inside the navigation menu (except for logo/home) */
-#links {
-    display: none;
-    flex-direction: column;
-}
-
-/* Style navigation menu links */
-.topnav a {
+#topnav a {
     color: white;
     padding: 1rem;
     text-decoration: none;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,35 +11,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/src/index.js"></script>
 </head>
-<body>
-    <header id="header" class="p-1">
-        <div class="topnav flex content-center justify-between">
-            <a href="#home" class="flex content-center">Inicio</a>
-            <a href="javascript:void(0);" class="icon flex content-center" onclick="clickMenu()">
-                <img src="/src/img/menu.png" alt="Menu" class="size-10">
+
+<body class="min-h-screen">
+    <p id="home"></p>
+    <header id="header" class="p-1 lg:flex lg:content-center lg:sticky lg:top-0">
+        <div id="topnav" class="flex content-center justify-between bg-#248A00 lg:w-fit">
+            <a href="#home" class="flex content-center text-xl">
+                <p class="text-3xl lg:text-xl">Inicio</p>
             </a>
+            <div id="iconContainer" class="flex lg:hidden">
+                <a id="icon" class="flex content-center">
+                    <img src="/src/img/menu.png" alt="Menu" class="size-10">
+                </a>
+            </div>
         </div>
-        <div id="links" class="text-white flex flex-col gap-4 pl-3 pb-1">
-            <a href="#presentacion">¿Quiénes somos?</a>
-            <a href="#galeriaTitle">Galería</a>
-            <a href="#accesoRedes">Redes</a>
+        <div id="links" class="flex flex-col gap-5 lg:flex-row pl-3 pb-2 w-full text-white lg:content-center lg:justify-around">
+            <a href="#presentacion" class="content-center"><p class="text-3xl lg:text-xl">¿Quiénes somos?</p></a>
+            <a href="#galeriaTitle" class="content-center"><p class="text-3xl lg:text-xl">Galería</p></a>
+            <a href="#accesoRedes" class="content-center"><p class="text-3xl lg:text-xl">Redes</p></a>
         </div>
     </header>
     <main id="main">
         <section id="primeraVista" class="pb-2">
             <div id="titleText">
-                <h1 class="textFont verdePrincipal text-5xl text-center tracking-widest">Sentando mentes veRdes</h1>
+                <h1 class="textFont verdePrincipal text-6xl lg:text-5xl text-center tracking-widest">Sentando mentes veRdes</h1>
             </div>
             <div id="imgDiv" class="flex justify-center">
-                <img src="/src/img/Cerebro sentado.png" alt="Logo" title="Logo" class="size-10/12">
+                <img src="/src/img/Cerebro sentado.png" alt="Logo" title="Logo" id="imgLogo" class="size-8/12 lg:size-4/12">
             </div>
         </section>
         <section id="presentacion">
             <div id="presentacionTitle">
-                <h1 class="textFont verdePrincipal text-5xl text-center tracking-widest">¿Quiénes somos?</h1>
+                <h1 class="textFont verdePrincipal text-6xl lg:text-5xl text-center tracking-widest">¿Quiénes somos?</h1>
             </div>
-            <div id="presentacionParrafo" class="p-1 text-center text-2xl">
+            <div id="presentacionParrafo" class="p-1 text-center text-2xl lg:text-3xl">
                 <p class="textFont">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa corporis deserunt
                     ullam, enim quaerat tempore eos accusantium quidem nam non quisquam veniam quia quod in ab velit
                     maxime dignissimos ut assumenda dicta? Iste repellat placeat officiis iusto quas fuga laudantium!
@@ -47,7 +55,7 @@
         </section>
         <section id="galeria">
             <div id="galeriaTitle" class="pb-5 pt-5">
-                <h1 class="textFont verdePrincipal text-5xl text-center tracking-widest">Galería</h1>
+                <h1 class="textFont verdePrincipal text-5xl lg:text-6xl text-center tracking-widest">Galería</h1>
             </div>
             <div id="kiko-slider">
                 <ul class="slider rounded-xl">
@@ -97,39 +105,17 @@
     <footer id="footer" class="p-3">
         <div id="accesoRedes">
             <ul class="flex justify-around">
-                <li class="flex bg-black rounded-xl"><img src="/src/img/instagram.svg" alt="" class="size-8 invert"></li>
+                <li class="flex bg-black rounded-xl"><img src="/src/img/instagram.svg" alt="" class="size-8 invert">
+                </li>
                 <li class="flex bg-white rounded-2xl"><img src="/src/img/facebook.svg" alt="" class="size-8"></li>
-                <li class="flex bg-black rounded-2xl"><img src="/src/img/whatsapp.svg" alt="" class="size-8 invert"></li>
+                <li class="flex bg-black rounded-2xl"><img src="/src/img/whatsapp.svg" alt="" class="size-8 invert">
+                </li>
             </ul>
         </div>
         <div class="textoDerechos">
             <p class="text-center textFont text-2xl m-2 underline">Sentando mentes veRdes 2024</p>
         </div>
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let liPrim = document.querySelector(".liPrim");
-            liPrim.style.opacity = 1;
-        });
-
-        function clickMenu() {
-            let x = document.querySelector("#links");
-            if (x.style.display === "flex") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "flex";
-            }
-        }
-
-        function ocultarPrimerImg() {
-            let liPrim = document.querySelector(".liPrim");
-            liPrim.style.opacity = 0;
-        }
-
-        function llamarPrimerImg() {
-            let liPrim = document.querySelector(".liPrim");
-            liPrim.style.opacity = 1;
-        }
-    </script>
 </body>
+
 </html>
