@@ -1,34 +1,34 @@
 let links = document.querySelector("#links");
 let icon = document.querySelector("#icon");
 
-document.addEventListener("DOMContentLoaded", function () {
-    let liPrim = document.querySelector(".liPrim");
-    liPrim.style.opacity = 1;
+document.addEventListener('DOMContentLoaded', function() {
+    icon.addEventListener("click", function () {
+        links.classList.toggle("hidden");
+    });
+    
+    let slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+    let prevButton = document.querySelector('.prev');
+    let nextButton = document.querySelector('.next');
 
-    if (window.innerWidth < 1024) {
-        links.classList.add("hidden");
-        icon.addEventListener("click", clickMenu);
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
     }
-    else {
-        icon.removeEventListener("click", clickMenu);
+
+    function showNextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
     }
+
+    function showPrevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    prevButton.addEventListener('click', showPrevSlide);
+    nextButton.addEventListener('click', showNextSlide);
+
+    showSlide(currentIndex);
 });
-
-function clickMenu() {
-    if (links.classList.contains("hidden")) {
-        links.classList.remove("hidden");
-        links.classList.add("flex", "flex-col");
-    } else {
-        links.classList.add("hidden");
-    }
-}
-
-function ocultarPrimerImg() {
-    let liPrim = document.querySelector(".liPrim");
-    liPrim.style.opacity = 0;
-}
-
-function llamarPrimerImg() {
-    let liPrim = document.querySelector(".liPrim");
-    liPrim.style.opacity = 1;
-}
