@@ -1,11 +1,12 @@
 let links = document.querySelector("#links");
 let icon = document.querySelector("#icon");
+let presentacionBtn = document.querySelector("#presentacionBtn");
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     icon.addEventListener("click", function () {
         links.classList.toggle("hidden");
     });
-    
+
     let slides = document.querySelectorAll('.slide');
     let currentIndex = 0;
     let prevButton = document.querySelector('.prev');
