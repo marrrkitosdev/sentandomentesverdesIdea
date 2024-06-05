@@ -2,7 +2,7 @@ let links = document.querySelector("#links");
 let icon = document.querySelector("#icon");
 let presentacionBtn = document.querySelector("#presentacionBtn");
 let imgLogo = document.querySelector("#imgLogo");
-let videoPlay = document.querySelector(".videoPlay");
+let videoPlay = document.querySelectorAll(".videoPlay");
 
 document.addEventListener('DOMContentLoaded', function () {
     icon.addEventListener("click", function () {
@@ -16,13 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
         imgLogo.classList.toggle("logoActivo");
     })
 
-    videoPlay.addEventListener("click", function () {
-        if (this.paused) {
-            this.play();
-        } else {
-            this.pause();
-        }
-    });
+    function pauseVid() {
+        videoPlay.forEach(video => {
+            video.pause();
+        });
+    }
 
     let slides = document.querySelectorAll('.slide');
     let currentIndex = 0;
@@ -33,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         slides.forEach((slide, i) => {
             slide.style.display = i === index ? 'block' : 'none';
         });
+        pauseVid();
     }
 
     function showNextSlide() {
