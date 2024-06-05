@@ -55,8 +55,8 @@
 }
 
 .slide {
-    width: 34rem;
-    height: 34rem;
+    width: 24rem;
+    height: 24rem;
     transition: opacity 1s ease;
     overflow: hidden;
 }
@@ -77,6 +77,11 @@
     html {
         scroll-padding-top: 70px;
         min-height: 100vh;
+    }
+
+    .slide {
+        width: 28rem;
+        height: 28rem;
     }
 
     #titleLogo:hover, #imgLogo:hover {
