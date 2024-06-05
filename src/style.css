@@ -55,8 +55,8 @@
 }
 
 .slide {
-    width: 22rem;
-    height: 22rem;
+    width: 18rem;
+    height: 24rem;
     transition: opacity 1s ease;
     overflow: hidden;
 }
