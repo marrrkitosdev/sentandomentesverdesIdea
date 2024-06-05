@@ -2,6 +2,7 @@ let links = document.querySelector("#links");
 let icon = document.querySelector("#icon");
 let presentacionBtn = document.querySelector("#presentacionBtn");
 let imgLogo = document.querySelector("#imgLogo");
+let videoPlay = document.querySelector(".videoPlay");
 
 document.addEventListener('DOMContentLoaded', function () {
     icon.addEventListener("click", function () {
@@ -14,6 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 1500);
         imgLogo.classList.toggle("logoActivo");
     })
+
+    videoPlay.addEventListener("click", function () {
+        if (this.paused) {
+            this.play();
+        } else {
+            this.pause();
+        }
+    });
 
     let slides = document.querySelectorAll('.slide');
     let currentIndex = 0;
