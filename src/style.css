@@ -89,10 +89,10 @@
     }
 
     .navLink:hover{
-        filter: drop-shadow(#fff 0px 0px 8px);
+        filter: drop-shadow(#000 0px 0px 5px);
     }
 
     #copyText:hover {
-        filter: drop-shadow(#000 0px 0px 12px);
+        filter: drop-shadow(#fff 0px 0px 5px);
     }
 }
