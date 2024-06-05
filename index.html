@@ -16,10 +16,10 @@
 
 <body class="min-h-screen">
     <p id="home"></p>
-    <header id="header" class="p-1 lg:flex lg:content-center lg:sticky lg:top-0">
+    <header id="header" class="p-1 lg:flex lg:content-center lg:sticky lg:top-0 z-10">
         <div id="topnav" class="flex content-center justify-between bg-#248A00 lg:w-2/12 lg:justify-center">
             <a href="#home" class="flex content-center items-center text-xl">
-                <p class="text-xl lg:underline">Inicio</p>
+                <p class="text-xl lg:font-semibold navLink">Inicio</p>
             </a>
             <div id="iconContainer" class="flex lg:hidden">
                 <a class="flex content-center" id="icon">
@@ -30,25 +30,25 @@
         <div id="links"
             class="hidden flex-col lg:flex lg:flex-row pl-3 pb-2 lg:pl-0 lg:pb-0 w-full text-white lg:content-center lg:justify-around">
             <a href="#presentacion" class="content-center" id="presentacionBtn">
-                <p class="text-xl lg:underline pb-4 lg:pb-0">¿Quiénes somos?</p>
+                <p class="text-xl lg:font-semibold pb-4 lg:pb-0 navLink">¿Quiénes somos?</p>
             </a>
             <a href="#galeriaTitle" class="content-center">
-                <p class="text-xl lg:underline pb-4 lg:pb-0">Galería</p>
+                <p class="text-xl lg:font-semibold pb-4 lg:pb-0 navLink">Galería</p>
             </a>
             <a href="#accesoRedes" class="content-center">
-                <p class="text-xl lg:underline pb-4 lg:pb-0">Redes</p>
+                <p class="text-xl lg:font-semibold pb-4 lg:pb-0 navLink">Redes</p>
             </a>
         </div>
     </header>
     <main id="main">
         <section id="primeraVista" class="pb-2">
             <div id="titleText">
-                <h1 class="textFont verdePrincipal text-6xl text-center tracking-widest">Sentando mentes
+                <h1 class="textFont verdePrincipal text-6xl text-center tracking-widest z-0" id="titleLogo">Sentando mentes
                     veRdes</h1>
             </div>
             <div id="imgDiv" class="flex justify-center">
                 <img src="/src/img/logoProyecto.png" alt="Logo" title="Logo" id="imgLogo"
-                    class="max-w-xl h-auto lg:max-w-sm">
+                    class="max-w-xl h-auto lg:max-w-sm z-0">
             </div>
         </section>
         <section id="presentacion">
@@ -80,7 +80,7 @@
                             <img src="https://picsum.photos/500/300" alt="Imagen 4" class="rounded-xl">
                         </div>
                         <div class="slide rounded-xl w-60 lg:w-96">
-                            <img src="https://drive.google.com/file/d/19GMdI42OjaE0acs_4lmlfcg_0K75zC2h/view?usp=drive_link" alt="Imagen 4" class="rounded-xl">
+                            <img src="/src/img/logoProyecto.png" alt="Imagen 4" class="rounded-xl">
                         </div>
                     </div>
                 </div>
@@ -91,12 +91,12 @@
     <footer id="footer" class="p-5 lg:p-4">
         <div id="accesoRedes">
             <ul class="flex justify-around">
-                <a class="flex items-center" href="https://www.instagram.com/ees7elparaiso_patiosabiertos/" target="_blank" title="Instagram Institución"><img src="/src/img/instagram.svg" alt="Instagram Logo" class="size-9 invert bg-white rounded-xl m-1 cursor-pointer">
+                <a class="flex items-center" href="https://www.instagram.com/ees7elparaiso_patiosabiertos/" target="_blank" title="Instagram Institución"><img src="/src/img/instagram.svg" alt="Instagram Logo" class="size-9 invert bg-white rounded-xl m-1 cursor-pointer lg:hover:scale-105">
                 </a>
                 <div class="textoDerechos">
-                    <p class="text-center textFont text-3xl m-2 underline">Sentando mentes veRdes 2024</p>
+                    <p class="text-center textFont text-3xl m-2 underline" id="copyText">Sentando mentes veRdes 2024</p>
                 </div>
-                <a class="flex items-center" href="https://www.facebook.com/secundariaElParaiso" target="_blank" title="Facebook Institución"><img src="/src/img/facebook.svg" alt="Facebook Logo" class="size-9 bg-white m-1 rounded-3xl cursor-pointer"></a>
+                <a class="flex items-center" href="https://www.facebook.com/secundariaElParaiso" target="_blank" title="Facebook Institución"><img src="/src/img/facebook.svg" alt="Facebook Logo" class="size-9 bg-white m-1 rounded-3xl cursor-pointer lg:hover:scale-105"></a>
             </ul>
         </div>
     </footer>

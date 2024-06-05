@@ -68,4 +68,16 @@
     html {
         scroll-padding-top: 70px;
     }
+
+    #titleLogo:hover, #imgLogo:hover {
+        filter: drop-shadow(#248A00 0px 0px 10px);
+    }
+
+    .navLink:hover{
+        filter: drop-shadow(#fff 0px 0px 8px);
+    }
+
+    #copyText:hover {
+        filter: drop-shadow(#000 0px 0px 12px);
+    }
 }
