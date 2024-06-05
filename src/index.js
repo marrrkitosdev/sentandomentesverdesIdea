@@ -1,11 +1,19 @@
 let links = document.querySelector("#links");
 let icon = document.querySelector("#icon");
 let presentacionBtn = document.querySelector("#presentacionBtn");
+let imgLogo = document.querySelector("#imgLogo");
 
 document.addEventListener('DOMContentLoaded', function () {
     icon.addEventListener("click", function () {
         links.classList.toggle("hidden");
     });
+
+    imgLogo.addEventListener("click", function () {
+        setTimeout(() => {
+            imgLogo.classList.toggle("logoActivo");
+        }, 1500);
+        imgLogo.classList.toggle("logoActivo");
+    })
 
     let slides = document.querySelectorAll('.slide');
     let currentIndex = 0;
